@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import useAlbums from './useAlbums';
 import AlbumsList from './AlbumsList';
+import Search from './Search';
 
 function AlbumsPage() {
   const { fetchAlbums, loading, data } = useAlbums();
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [initialized, setInitialized] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,6 +20,15 @@ function AlbumsPage() {
     })();
   }, []);
 
+  const albums = useMemo(() => {
+    const query = searchQuery.toLowerCase().trim().replace(/\s+/, '');
+    return data.filter(
+      (album) =>
+        album.name.toLowerCase().includes(query) ||
+        album.artist.name.toLowerCase().includes(query)
+    );
+  }, [data, searchQuery]);
+
   if (!initialized) {
     return null;
   }
@@ -28,8 +39,9 @@ function AlbumsPage() {
         <h1 className="text-3xl font-bold text-white mb-5 pt-36">
           What&apos;s on today?
         </h1>
+        <Search searchQuery={searchQuery} onChange={setSearchQuery} />
       </header>
-      <AlbumsList albums={data} loading={loading} />
+      <AlbumsList albums={albums} loading={loading} />
     </div>
   );
 }
