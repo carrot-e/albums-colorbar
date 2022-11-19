@@ -14,7 +14,7 @@ function AlbumsPage() {
         await fetchAlbums();
         setInitialized(true);
       } catch (e) {
-        // TODO: Proper error logging?
+        // TODO: Proper error logging
         console.error('An error happened while fetching the data', e);
       }
     })();
@@ -30,7 +30,7 @@ function AlbumsPage() {
   }, [data, searchQuery]);
 
   if (!initialized) {
-    return null;
+    return <div className="bg-stone-800 min-h-screen min-w-full" />;
   }
 
   return (

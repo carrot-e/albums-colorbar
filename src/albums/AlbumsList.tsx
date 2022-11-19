@@ -9,14 +9,14 @@ function AlbumsList({
   albums: AlbumInterface[];
   loading: boolean;
 }) {
+  if (loading) {
+    return <div className="md:p-5 p-3 text-white opacity-30">Loading...</div>;
+  }
+
   if (albums.length === 0) {
     return (
       <div className="md:p-5 p-3 text-white opacity-30">No albums found</div>
     );
-  }
-
-  if (loading) {
-    return <div className="md:p-5 p-3 text-white opacity-30">Loading...</div>;
   }
 
   return (
