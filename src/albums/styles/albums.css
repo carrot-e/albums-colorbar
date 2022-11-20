@@ -1,0 +1,45 @@
+.overflow-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.overflow-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.container.grid {
+  grid-template-rows: fit-content(100%) auto;
+}
+
+.row-item {
+  width: 10px;
+  height: 170px;
+}
+
+.row-item.hovered {
+  z-index: 100;
+}
+
+.row-item.hovered > div {
+  transform: scale(1.5);
+  margin-top: -22px;
+  height: 200px;
+  width: 200px;
+  opacity: 1;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotated {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  animation: spin 15s linear infinite;
+}
