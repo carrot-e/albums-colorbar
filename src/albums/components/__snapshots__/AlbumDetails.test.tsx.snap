@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlbumDetails /> renders <AlbumDetails /> 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pl-10 pr-10 pb-10 pt-5 flex flex-col h-full"
+      >
+        <div
+          class="flex justify-end mb-2.5 font-bold text-xl opacity-50 hover:opacity-100 transition"
+        >
+          <button>
+            Close
+          </button>
+        </div>
+        <div
+          class="w-full mb-6 relative bg-black"
+        >
+          <img
+            alt="Faith in the Future (Deluxe)"
+            class="w-full opacity-75"
+            src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/59/f9/f3/59f9f3b6-e815-99fd-a359-10fec504a5e3/4050538836639.jpg/170x170bb.png"
+          />
+          <div
+            class="rotated absolute rounded-full bg-cover"
+            style="background-image: url(https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/59/f9/f3/59f9f3b6-e815-99fd-a359-10fec504a5e3/4050538836639.jpg/170x170bb.png);"
+          />
+        </div>
+        <div
+          class="flex flex-col flex-grow justify-between"
+        >
+          <div>
+            <p
+              class="text-xl mb-2.5 font-bold italic"
+            >
+              #
+              3
+            </p>
+            <p
+              class="text-4xl font-bold mb-5"
+            >
+              Faith in the Future (Deluxe)
+            </p>
+            <p
+              class="text-xl mb-3 opacity-50"
+            >
+              Album by 
+              Louis Tomlinson
+               • 
+              01.10.2022
+               • 
+              15
+               
+              songs
+            </p>
+            <p
+              class="text-xl mb-5"
+            >
+              Genre: 
+              Pop
+            </p>
+            <p
+              class="text-sm mb-10"
+            >
+              This Compilation ℗ 2013 Capitol Records, LLC
+            </p>
+          </div>
+          <div
+            class="mb-5 font-bold italic text-xl"
+          >
+            <a
+              class="text-xl"
+              href="https://music.apple.com/us/album/faith-in-the-future-deluxe/1640572729?uo=2"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Listen on iTunes →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pl-10 pr-10 pb-10 pt-5 flex flex-col h-full"
+    >
+      <div
+        class="flex justify-end mb-2.5 font-bold text-xl opacity-50 hover:opacity-100 transition"
+      >
+        <button>
+          Close
+        </button>
+      </div>
+      <div
+        class="w-full mb-6 relative bg-black"
+      >
+        <img
+          alt="Faith in the Future (Deluxe)"
+          class="w-full opacity-75"
+          src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/59/f9/f3/59f9f3b6-e815-99fd-a359-10fec504a5e3/4050538836639.jpg/170x170bb.png"
+        />
+        <div
+          class="rotated absolute rounded-full bg-cover"
+          style="background-image: url(https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/59/f9/f3/59f9f3b6-e815-99fd-a359-10fec504a5e3/4050538836639.jpg/170x170bb.png);"
+        />
+      </div>
+      <div
+        class="flex flex-col flex-grow justify-between"
+      >
+        <div>
+          <p
+            class="text-xl mb-2.5 font-bold italic"
+          >
+            #
+            3
+          </p>
+          <p
+            class="text-4xl font-bold mb-5"
+          >
+            Faith in the Future (Deluxe)
+          </p>
+          <p
+            class="text-xl mb-3 opacity-50"
+          >
+            Album by 
+            Louis Tomlinson
+             • 
+            01.10.2022
+             • 
+            15
+             
+            songs
+          </p>
+          <p
+            class="text-xl mb-5"
+          >
+            Genre: 
+            Pop
+          </p>
+          <p
+            class="text-sm mb-10"
+          >
+            This Compilation ℗ 2013 Capitol Records, LLC
+          </p>
+        </div>
+        <div
+          class="mb-5 font-bold italic text-xl"
+        >
+          <a
+            class="text-xl"
+            href="https://music.apple.com/us/album/faith-in-the-future-deluxe/1640572729?uo=2"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Listen on iTunes →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

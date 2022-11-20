@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { format, subDays } from 'date-fns';
-import Album from './Album';
+import { Album as AlbumInterface } from '../hooks/useAlbums';
+import AlbumInGrid from './AlbumInGrid';
 
-const album = {
+const album: AlbumInterface = {
   id: '1640572729',
   name: 'Faith in the Future (Deluxe)',
   link: 'https://music.apple.com/us/album/faith-in-the-future-deluxe/1640572729?uo=2',
@@ -20,32 +21,35 @@ const album = {
     name: 'Louis Tomlinson',
   },
   ranking: 3,
+  dominantColor: [0, 0, 0],
+  rights: 'This Compilation ℗ 2013 Capitol Records, LLC',
+  itemCount: '15',
 };
 
-describe('<Album />', () => {
-  test('renders <Album />', () => {
-    const component = render(<Album album={album} />);
+describe('<AlbumInGrid />', () => {
+  test('renders <AlbumInGrid />', () => {
+    const component = render(<AlbumInGrid album={album} />);
     expect(component).toMatchSnapshot();
   });
 
-  test('renders <Album /> released today', () => {
+  test('renders <AlbumInGrid /> released today', () => {
     album.releaseDate = new Date();
-    render(<Album album={album} />);
+    render(<AlbumInGrid album={album} />);
 
     expect(screen.queryByText('Today')).toBeInTheDocument();
     expect(screen.queryByText('day ago')).not.toBeInTheDocument();
   });
 
-  test('renders <Album /> released during the week', () => {
+  test('renders <AlbumInGrid /> released during the week', () => {
     album.releaseDate = subDays(new Date(), 6);
-    render(<Album album={album} />);
+    render(<AlbumInGrid album={album} />);
 
     expect(screen.queryByText('6 days ago')).toBeInTheDocument();
   });
 
-  test('renders <Album /> released more than a week ago', () => {
+  test('renders <AlbumInGrid /> released more than a week ago', () => {
     album.releaseDate = subDays(new Date(), 7);
-    render(<Album album={album} />);
+    render(<AlbumInGrid album={album} />);
 
     expect(screen.queryByText('7 days ago')).not.toBeInTheDocument();
     expect(

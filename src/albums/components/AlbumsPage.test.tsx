@@ -3,24 +3,35 @@ import AlbumsPage from './AlbumsPage';
 import { act } from 'react-dom/test-utils';
 import React from 'react';
 
-jest.mock('./dataProvider', () => ({
+jest.mock('color-thief-react/lib/utils');
+jest.mock('../data/dataProvider', () => ({
   getAlbums: jest.fn(),
 }));
-import dataProvider from './dataProvider';
+import dataProvider from '../data/dataProvider';
+import { getPredominantColorFromImgURL } from 'color-thief-react/lib/utils';
 
 describe('<AlbumsPage />', () => {
   test('renders <AlbumsPage /> and searching', async () => {
+    (getPredominantColorFromImgURL as jest.Mock).mockResolvedValue([0, 0, 0])
     const getAlbumsMock = jest.fn().mockResolvedValue(response);
+    // jest.mock(HSBToRGB).fn().
     dataProvider.getAlbums = getAlbumsMock;
     render(<AlbumsPage />);
     expect(getAlbumsMock).toHaveBeenCalledTimes(1);
+
+    await waitFor(() => {
+      const gridViewSwitcher = screen.getByText('Boring grid');
+
+      expect(gridViewSwitcher).toBeInTheDocument();
+      fireEvent.click(gridViewSwitcher);
+    });
 
     await waitFor(() => {
       expect(screen.getByText('Sonder')).toBeInTheDocument();
       expect(screen.getByText('Funny Girl')).toBeInTheDocument();
     });
 
-    const search = await screen.findByPlaceholderText('Search title or artist');
+    const search = await screen.findByPlaceholderText('Search');
 
     act(() => {
       fireEvent.change(search, { target: { value: 'girl' } });
